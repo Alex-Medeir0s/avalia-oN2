@@ -37,14 +37,4 @@ public class TarefaController {
             return ResponseEntity.ok(tarefa);
         }).orElse(ResponseEntity.notFound().build());
     }
-
-    // Deletar uma tarefa
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletarTarefa(@PathVariable Long id) {
-        if (tarefaRepository.existsById(id)) {
-            tarefaRepository.deleteById(id);
-            return ResponseEntity.noContent().build();
-        }
-        return ResponseEntity.notFound().build();
-    }
 }

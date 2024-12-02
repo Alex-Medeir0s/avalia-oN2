@@ -3,6 +3,8 @@ package com.br.model;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
+import javax.persistence.Id;
+
 @Entity
 public class Tarefa {
     @Id
